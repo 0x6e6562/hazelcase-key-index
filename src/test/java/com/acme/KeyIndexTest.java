@@ -40,6 +40,9 @@ public class KeyIndexTest {
 
     long mapFillTimeTaken = (mapFillFinish - mapFillStart);
     System.out.println(String.format("Time to put %s entries into map: %s", iterations, mapFillTimeTaken));
+    System.out.println();
+    System.out.println(map.getLocalMapStats());
+    System.out.println();
 
     Predicate predicate = new KeyPredicate(prefix);
 
@@ -51,6 +54,7 @@ public class KeyIndexTest {
     assertTrue(keys.contains(new Key(prefix, -1)));
 
     long queryTimeTaken = (queryFinish - querystart);
-    System.out.println(String.format("Time to query %s entries: %s", iterations, queryTimeTaken));
+    System.out.println(String.format("Time to query %s entries: %s", map.size(), queryTimeTaken));
+
   }
 }
