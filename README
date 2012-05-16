@@ -1,0 +1,6 @@
+This is a simple benchmark to query a Hazelcast by a portion of a key of a map.
+
+To execute the test, run 
+
+$ mvn test
+
